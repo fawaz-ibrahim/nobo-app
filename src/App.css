@@ -1,0 +1,252 @@
+:root {
+  --main-pink-color: #f6bbb1;
+  --main-pink-border: #ffe8e6;
+}
+.text-center{
+  text-align: center;
+}
+/*
+******************************** Start Header *******************************
+*/
+header{
+  position: relative;
+  text-align: center;
+  background-color: var(--main-pink-color);
+  border-bottom: 3px solid var(--main-pink-border);
+  line-height: 50px;
+  font-size: 2em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header .logo{
+  width: 128px;
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+/*
+******************************** End Header *******************************
+*/
+/*
+******************************** Start Footer *******************************
+*/
+footer{
+  padding: 10px;
+  text-align: center;
+  background-color: var(--main-pink-color);
+  border-top: 3px solid var(--main-pink-border);
+}
+/*
+******************************** End Footer *******************************
+*/
+/*
+******************************** Start Main Container *******************************
+*/
+div.main-container{
+  margin: 10px;
+}
+
+/*############################## Error component */
+div.error{
+  padding: 10px;
+  border: 2px solid #f5c6cb;
+  border-radius: 15px;
+  color: #721c24;
+  background-color: #f8d7da;
+  text-align: center;
+  width: 100%;
+}
+/*############################## Loading component */
+div.loading{
+  padding: 10px;
+  border: 2px solid #b8daff;
+  border-radius: 15px;
+  color: #004085; 
+  background-color: #cce5ff;
+  text-align: center;
+  width: 100%;
+}
+/*
+******************************** Start Home Page *******************************
+*/
+/*############################## Search component */
+div.search-component{
+  display: flex;
+  justify-content: center;
+}
+
+div.search-component form{
+  width: 50%;
+  display: flex;
+}
+@media (max-width: 768px){
+  div.search-component form{
+    width: 75%;
+  }
+}
+
+@media (max-width: 576px) {
+  div.search-component form{
+    width: 100%;
+  }
+}
+div.search-component form input{
+  border: 2px solid var(--main-pink-border);
+  border-right: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 11px;
+  width: 100%;
+  transition: .3s;
+}
+div.search-component form input:focus{
+  outline: none;
+  box-shadow: -1px 0px 8px 1px var(--main-pink-border);
+}
+div.search-component form button{
+  border: 2px solid var(--main-pink-border);
+  background-color: var(--main-pink-color);
+  border-left: none;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px;
+  width: 100px;
+  transition: .3s;
+  cursor: pointer;
+}
+div.search-component form button:focus{
+  outline: none;
+  box-shadow: 1px 0px 8px 1px var(--main-pink-border);
+}
+div.search-component form button:hover{
+  outline: none;
+  background-color: var(--main-pink-border);
+}
+div.search-component form button img{
+  width: 20px;
+}
+/*############################## Search component */
+.film-list-container{
+  margin-top: 20px;
+  justify-content: center;
+}
+.films-list{
+  margin: 0 auto;
+  display: flex;
+  width: 60%;
+  flex-wrap: wrap;
+}
+.films-list a.film-thumbnail{
+  cursor: pointer;
+  display: block;
+  width: calc(33.3% - 20px);
+  height: 390px;
+  padding: 10px;
+  position: relative;
+  color: black;
+}
+.films-list a.film-thumbnail .film-thumbnail-image-container{
+  display: block;
+  height: 100%;
+  overflow: hidden;
+}
+.films-list a.film-thumbnail .film-thumbnail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.films-list a.film-thumbnail .film-thumbnail-title{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  line-height: 30px;
+  font-size: 26px;
+  padding: 10px;
+  background-color: #f6bcb163 ;
+  margin: 10px;
+  transition: .3s ;
+}
+
+.films-list a.film-thumbnail:hover .film-thumbnail-image{
+  transform: scale(1.2);
+}
+.films-list a.film-thumbnail:hover .film-thumbnail-title{
+  padding-bottom: 30%;
+  background-color: #f6bdb1d5 ;
+}
+@media (max-width: 1200px){
+  .films-list{
+    width: 70%;
+  }
+}
+
+@media (max-width: 992px){
+  .films-list{
+    width: 75%;
+  }
+  .films-list a.film-thumbnail{
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px){
+  .films-list{
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .films-list{
+    width: 100%;
+  }
+  .films-list a.film-thumbnail{
+    width: calc(100% - 20px);
+  }
+}
+/*
+******************************** End Home Page *******************************
+*/
+
+/*
+******************************** Start Film Page *******************************
+*/
+.film-page .film-poster-image{
+  background-position: center;
+}
+.film-page .film-information{
+  margin: 10px;
+}
+.film-page .film-information .column{
+  margin: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+.film-page .film-information .film-rating-container{
+  width: 300px;
+  height: 16px;
+  background-color: #b8daff62;
+}
+.film-page .film-information .film-rating-container .film-rating{
+  background-color: white;
+  height: 16px;
+  display: block;
+}
+.film-page .film-information .film-genre,
+.film-page .film-information .film-day{
+  display: inline-block;
+  background-color: #b8daff62;
+  border-radius: 15px;
+  padding: 5px;margin-right: 2px;
+}
+/*
+******************************** End Film Page *******************************
+*/
+
+/*
+******************************** End Main Container *******************************
+*/
